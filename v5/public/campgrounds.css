@@ -1,0 +1,116 @@
+body {
+    text-align: center;
+    background: #FFF;
+    font-family: 'Cabin', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar-toggler {
+        color: #FFF;
+        border-color: #FFF;
+    }
+
+.navbar-brand, .nav-link {
+    color: #FFF;
+}
+
+.custom-navbar {
+    background: #4D924D;
+}
+
+/* NAVBAR END */
+/* THUMBNAILS */
+
+.camp-pic {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.campground {
+    margin-bottom: 25px;
+}
+
+.caption {
+    padding: 5px;
+}
+
+.thumbnails {
+    border: none;
+    color: #4D924D;
+}
+
+/* THUMBNAIL END */
+/* FONTS */
+
+.trademark {
+    color: #4D924D;
+}
+
+.popular h3 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: #4D924D;
+}
+
+.center h1 {
+    margin-bottom: 20px;
+}
+
+/* FONTS END */
+/* JUMBOTRON */
+
+.jumbotron {
+    background: rgba(0, 0, 0, 0);
+    color: #4D924D;
+}
+
+/* JUMBOTRON END */
+/* BUTTONS */
+
+.btn-green {
+    background: #4D924D;
+    border: none;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+/* BUTTONS END */
+/* COMMENT FORM STYLES */
+    
+#comment-form {
+    width: 35%;
+}    
+    
+/* COMMENT FORM STYLES END*/
+/* SHOW PAGE STYLES */
+.camp-img {
+    width: 100%;
+}
+
+.img-thumbnail {
+    padding: 20px;
+}
+
+.caption-full {
+    margin-top: 15px;
+}
+
+.show-content {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.comment-section {
+    margin-top: 35px;
+    padding: 20px;
+    background: #F2F2F2;
+}
+
+a {
+    color: #4D924D;
+}
+
+.userlogo {
+    margin-right: 4px;
+}

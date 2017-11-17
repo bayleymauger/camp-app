@@ -1,0 +1,38 @@
+<% include ../partials/customheader %>
+        <div class="container">
+            <div class="center-me">
+                <div class="center">
+                    <h1>Create a new Campground</h1>
+            
+                    <form action="/campgrounds" method="POST">
+                        <div class="form-group">
+                            <i class="fa fa-compass fa-icon"></i>
+                            <input class="form-control allow-icon" type="text" name="campground[name]" placeholder="Campground name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-file-image-o fa-icon"></i>
+                            <input class="form-control allow-icon" type="number" name="campground[price]" placeholder="Campground price" min="0.01" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-file-image-o fa-icon"></i>
+                            <input class="form-control allow-icon" type="url" name="campground[image]" placeholder="Image url" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-pencil-square-o fa-icon"></i>
+                            <textarea class="form-control allow-icon" type="textarea" name="campground[description]" placeholder="Campground description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                           <button class="btn btn-lg" type="submit">Submit!</button> 
+                        </div>
+                    </form>
+                    
+                    <a href="/campgrounds">Go back</a>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </body>
+</html>
+

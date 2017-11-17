@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/campgrounds.css">
+        <link rel="stylesheet" href="/new.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+            <a class="navbar-brand" href="/">YelpCamp</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Log Out</a>
+                        </li>
+                    </ul>    
+                </div>
+        </nav>
+        <div class="container">
+            <div class="center-me">
+                <div class="center">
+                    <h1>Create a new Campground</h1>
+            
+                    <form action="/campgrounds" method="POST">
+                        <div class="form-group">
+                            <i class="fa fa-compass fa-icon"></i>
+                            <input class="form-control allow-icon" type="text" name="name" placeholder="Campground name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-file-image-o fa-icon"></i>
+                            <input class="form-control allow-icon" type="url" name="image" placeholder="Image url" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-pencil-square-o fa-icon"></i>
+                            <textarea class="form-control allow-icon" type="textarea" name="description" placeholder="Campground description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                           <button class="btn btn-lg" type="submit">Submit!</button> 
+                        </div>
+                    </form>
+                    
+                    <a href="/campgrounds">Go back</a>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </body>
+</html>
+

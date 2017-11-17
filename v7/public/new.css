@@ -1,0 +1,76 @@
+body {
+    padding-top: 0;
+    background: #4D924D;
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    border-radius: 0px;
+}
+
+.allow-icon {
+    padding-left: 30px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.fa-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #4D924D;
+}
+
+.btn {
+    width: 100%;
+    background: #4D924D;
+    border: 2px solid white;
+    color: white;
+    border-radius: 2px;
+}
+
+.center-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+
+.sign-up {
+    width: 40%;
+}
+
+.landing-btn {
+    margin: 5px;
+}
+
+.continue {
+    margin-top: 10px;
+}
+
+.userlogo {
+    margin-right: 4px;
+}
+
+@media(max-width: 992px) {
+    .sign-up {
+        width: 60%;
+    }
+}
+
+@media(max-width: 768px) {
+    .sign-up {
+        width: 80%;
+    }
+}

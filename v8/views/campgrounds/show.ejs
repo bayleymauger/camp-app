@@ -1,0 +1,100 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row show-content">
+        <div class="col-md-3">
+            <a href="/campgrounds"><p class="lead"><i class="fa fa-arrow-left" style="margin-right: 8px"></i>Back</p></a>
+            <div class="list-group disable">
+                <li class="list-group-item">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+                <li class="list-group-item">Info 4</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="img-thumbnail">
+                <img class="camp-img" src="<%= campground.image %>" alt="<%= campground.name %>">
+                <div class="caption-full">
+                    <h4 class="pull-right">$9.00</h4>
+                    <a href="#"><h4><%= campground.name %></h4></a>
+                    <p><%= campground.description %></p>
+                    <p class="blockquote-footer">Submitted by <%= campground.user.username %></p>
+                    <% if(user && user._id.equals(campground.user.id)) { %>
+                        <a href="/campgrounds/<%= campground._id %>/edit" class="btn btn-sm btn-warning pull-right text-white">Edit</a>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Post</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    Are you sure?
+                                  </div>
+                                  <div class="modal-footer">
+                                      <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button class="btn btn-danger">Delete</button>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="card comment-section">
+                <% campground.comments.forEach(function(comment) { %>
+                    <div class="row comment-single">
+                        <div class="col-md-12">
+                            <strong><%= comment.author.username %></strong>
+                            <% if(user && user._id.equals(comment.author.id)) { %>
+                                <a style="margin-left:10px" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit"><i class="fa fa-pencil-square-o"></i></a>
+                                <a href="" style="color:red" data-toggle="modal" data-target="#commentModal"><i class="fa fa-times"></i></a>
+                                <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="commentModalLabel">Delete Comment</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            Are you sure?
+                                          </div>
+                                          <div class="modal-footer">
+                                              <form action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                  <button class="btn btn-danger">Delete</button>
+                                              </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            <% } %>
+                            <span class="pull-right"><%= comment.created.toDateString() %></span>
+                            <p><%= comment.text %></p>
+                            
+                        </div>
+                    </div>
+                <% }); %>
+                <div id="comment-form">
+                    <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+                        <div class="form-group">
+                            <label for="comment">Add a comment</label>
+                            <input id="comment" class="form-control" type="text" name="text" placeholder="Comment">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
